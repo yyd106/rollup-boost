@@ -99,7 +99,7 @@ By default, `rollup-boost` will proxy all RPC calls from the proposer `op-node` 
 
 ### Boost Sync
 
-By default, `rollup-boost` will sync the builder with the proposer `op-node`. After the builder is synced, boost sync improves the performance of keeping the builder in sync with the tip of the chainby removing the need to receive chain updates via p2p via the builder `op-node`. This entails additional engine api calls that are multiplexed to the builder from rollup-boost:
+By default, `rollup-boost` will sync the builder with the proposer `op-node`. After the builder is synced, boost sync improves the performance of keeping the builder in sync with the tip of the chain by removing the need to receive chain updates via p2p via the builder `op-node`. This entails additional engine api calls that are multiplexed to the builder from rollup-boost:
 
 - `engine_forkchoiceUpdatedV3`: this call will be multiplexed to the builder regardless of whether the call contains payload attributes or not.
 - `engine_newPayloadV3`: ensures the builder has the latest block if the local payload was used.
